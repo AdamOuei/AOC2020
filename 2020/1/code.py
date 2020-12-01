@@ -22,6 +22,7 @@ for i in input_as_int[:-1]:
     for j in input_as_int:
         if (2020-i-j) in input_as_int:
             result_2 = i * j * (2020-i-j)
+            break
     
 
 

@@ -25,9 +25,6 @@ for i in input_:
     string = split[1]
     low = int(numbers[0])
     high = int(numbers[1])
-    #print("The string was {} and the number interval was {} and {} and character was : {}".format(string,low,high,char))
-    #print(string[low])
-    #print(string[high])
     if ( bool(char == string[low]) ^ bool(char == string[high])):
         n_valid2 += 1
 

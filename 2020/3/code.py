@@ -9,9 +9,9 @@ input_ = [line for line in input.splitlines()]
 
 ## PART 1
 
-pos = -3
+pos = 0
 n_of_trees = 0
-for line in input_:
+for line in input_[1:]:
     w = len(line)
     pos = (pos + 3) % w
     if (line[pos] == '#'):

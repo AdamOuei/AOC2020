@@ -7,17 +7,14 @@ with open((__file__.rstrip("code.py")+"input.txt"), 'r') as input_file:
 
 b_pass = [line for line in input.splitlines()]
 h_id = 0
-final_row = 0
-final_col = 0 
-test_row = 'FBFBBFFRLR'
 id_list = []
 
 # PART 1
 for b in b_pass:
     iid = int(b.replace('F','0').replace('B','1').replace('L','0').replace('R','1'),2)
     id_list.append(iid)
-
 h_id = max(id_list)
+
 # PART 2
 my_seat = 0
 

@@ -24,10 +24,10 @@ def loop(list,index):
     (inst,val) = list[index]
     if inst == 'jmp':
         index = (index + int(val)) % size
-    if inst == 'acc':
+    elif inst == 'acc':
         accu += int(val)
         index = (index + 1) % size     
-    if inst == 'nop':
+    elif inst == 'nop':
         index = (index + 1) % size
         
     loop(actions,index)

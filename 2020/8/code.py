@@ -7,16 +7,6 @@ with open((__file__.rstrip("code.py")+"input.txt"), 'r') as input_file:
     input = input_file.read()
 
 input_ = [line for line in input.splitlines()]
-test_input = ['nop +0',
-'acc +1',
-'jmp +4',
-'acc +3',
-'jmp -3',
-'acc -99',
-'acc +1',
-'jmp -4',
-'acc +6']
-
 actions = []
 for action in input_:
     val = re.search(r'[+,-]\d+$',action)[0]
@@ -65,14 +55,12 @@ def part2(n_runs):
             pointer += 1   
         elif inst == 'nop':
             pointer += 1
-
     return accu2
 
 results = 0
 for i in range(len(actions)):
     res = part2(i)
     if res is not None:
-        print('entered here')
         results = res
         
 print("Part Two : "+ str(results))

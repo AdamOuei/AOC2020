@@ -40,14 +40,14 @@ def part2(n_runs):
     accu2 = 0
     checked = set()
     while  (0 <= pointer < len(actions)):
+        if pointer in checked:
+            return None
+        checked.add(pointer)
         (inst,val) = actions[pointer]
         if pointer == n_runs and inst == 'jmp':
             inst = 'nop'            
         elif pointer == n_runs and inst == 'nop':
             inst = 'jmp'
-        if pointer in checked:
-            return None
-        checked.add(pointer)
         if inst == 'jmp':
             pointer += int(val) 
         elif inst == 'acc':
